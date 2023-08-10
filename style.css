@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {        
+/*  ## Font-family */    
+ --font-family1: 'Hanken Grotesk', sans-serif;
+ --font-family2: 'Outfit', sans-serif;
+ --font-family3: 'Red Hat Display', sans-serif;
+/* ## Front-end Style Guide */
+--Mobile: 375px;
+--Desktop: 1440px;
+
+/* ## Primary Colors */
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+/* ### Neutral */
+--Very-paleblue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+
+/* --Font-size (paragraph): 16px; */
+--font-size: 16px;
+
+}
+
+
+
+body{              
+    background-image: url('./images/pattern-background-desktop.svg');
+    background-size: contain;        
+    background-repeat: no-repeat;    
+    min-height: 150vh;
+    
+    background-color: var(--Pale-blue);
+    position: relative;
+}
+
+.container {                 
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    max-width: 450px; /* this places a boundary on the width of the div*/
+}
+
+
+.inner-content{            
+    background-color: #ffff;    
+    display: flex;               
+    flex-direction: column;      /*  puts all our content in the center */
+    justify-content: center;     
+    align-items: center;         /*  as a result all items would be centered*/
+    border-radius: 10px;             
+
+    padding: 0 20px 30px 20px;     /* specifies the padding on all sides of the container */    
+}
+
+
+img{    
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;    
+}
+
+.header{            
+    margin: 20px;    
+    text-align: center;
+}
+
+h1{
+    font-family: var(--font-family3);    
+    font-weight: 900;
+}
+
+
+.text{    
+    display: flex;        
+    align-items: center;
+    height: 70px;
+    width: 320px;
+    margin-bottom: 20px;   
+    padding: 0%;        
+}
+
+p{
+    color: var(--Desaturated-blue);
+    text-align: center;
+    
+    font-family: var(--font-family3);
+    font-weight: 700;    
+}
+
+.annual-container{    
+    
+    width: 320px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: var(--Very-paleblue);
+
+
+}
+
+.flex-box{        
+    display: flex;
+    justify-content: space-between;
+    align-items: center;       
+    gap: 15px; 
+}
+
+
+h2{
+    font-family: var(--font-family1);
+    font-weight: 900;    
+    font-size: 18px;
+}
+
+.inner-flex{        
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-2{
+    font-family: var(--font-family3);    
+    font-weight: 700;
+    color: var(--Dark-blue);
+}
+
+.effect:hover{
+    text-decoration: none;
+    color: var(--Bright-blue);
+    transition: color cubic-bezier(0.39, 0.575, 0.565, 1) ease; /* creates a subtle effect on the transition */
+}
+
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;        
+}
+
+button{
+    border-radius: 10px;
+    height: 50px;
+    width: 360px;   
+    box-shadow: linear-gradient(rgb(0,0,0,0.8)),var(--Dark-blue);
+    background-color: var(--Bright-blue);
+    color: var(--Very-paleblue);
+    font-family: var(--font-family3);    
+    font-weight: 700;
+    font-size: var(--font-size);
+    margin-bottom: 35px;    
+}
+
+button:hover{
+    background-color: var(--Desaturated-blue);
+    transition: background-color cubic-bezier(0.39, 0.575, 0.565, 1) ease;
+}
+.last{    
+    font-weight: 700;        
+}
+
+.last:hover{    
+    color: var(--Dark-blue);
+}
+
+
+@media (max-width: 425px) {
+    body {
+        background-image: url('./images/pattern-background-mobile.svg');
+        background-size: cover; /* Use 'cover' to maintain aspect ratio */
+        font-size: 14px;
+    }
+    .inner-content {
+        max-width: 88%; /* Adjusted max-width */
+        margin: 20px auto; /* Center the container */
+    }
+    h1 {
+        font-size: 20px;
+    }
+    .annual-container {
+        width: 300px;
+        padding: 12px;
+    }
+    .flex-box {
+        gap: 5px;
+    }
+    button{
+        width: 220px;
+    }    
+}
+
+
